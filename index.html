@@ -113,6 +113,1116 @@
 </head>
 <body class="selection:bg-indigo-500 selection:text-white">
 
+    <!-- HEADER NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-indigo-600 to-teal-500 p-0.5 shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center font-syne font-extrabold text-white text-base">
+                        TR
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-syne font-extrabold text-lg text-slate-900 leading-tight group-hover:text-indigo-600 transition-colors">TAFHIMUL RATUL</span>
+                    <span class="text-[11px] font-bold tracking-wider text-indigo-600 uppercase">Video Editor & Designer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm text-slate-600">
+                <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
+                <a href="#reels-section" class="hover:text-indigo-600 transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-clapperboard text-indigo-500"></i> Video Reels
+                </a>
+                <a href="#graphics-section" class="hover:text-indigo-600 transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-image text-purple-500"></i> Graphics
+                </a>
+                <a href="#services" class="hover:text-indigo-600 transition-colors">Services</a>
+                <a href="#reviews" class="hover:text-indigo-600 transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions Right -->
+            <div class="flex items-center gap-3">
+                <!-- Let's Talk CTA -->
+                <a href="#contact" class="px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-md shadow-indigo-600/20 hover:-translate-y-0.5">
+                    Let's Talk
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-700 hover:text-indigo-600 text-xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Drawer -->
+        <div id="mobileDrawer" class="hidden md:hidden border-b border-slate-200 bg-white px-6 py-5 space-y-3 font-semibold text-sm">
+            <a href="#about" class="block text-slate-700 hover:text-indigo-600 py-1">About</a>
+            <a href="#reels-section" class="block text-indigo-600 font-bold py-1">Video Reels</a>
+            <a href="#graphics-section" class="block text-purple-600 font-bold py-1">Graphics & Thumbnails</a>
+            <a href="#services" class="block text-slate-700 hover:text-indigo-600 py-1">Services</a>
+            <a href="#reviews" class="block text-slate-700 hover:text-indigo-600 py-1">Reviews</a>
+            <a href="#contact" class="block text-slate-700 hover:text-indigo-600 py-1">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO / ABOUT SECTION -->
+    <section id="about" class="relative py-16 md:py-24 bg-gradient-to-b from-slate-100 via-slate-50 to-white grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Intro -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-300/80 shadow-sm text-xs font-bold text-slate-800">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>Open for Freelance Projects & Monthly Retainers</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl xl:text-7xl font-extrabold text-slate-900 leading-[1.08] tracking-tight">
+                        I Edit Videos That <br class="hidden sm:inline"/>
+                        <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Keep People Watching.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-medium max-w-2xl mx-auto lg:mx-0">
+                        Hey! I'm <strong class="text-slate-900 font-bold">Tafhimul Islam Ratul</strong>. I cut high-retention short reels, polish SaaS explainer promos, and design high-CTR thumbnails. If you want videos that look sharp, sound great, and actually convert viewers, you're in the right place.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
+                        <span class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm"><i class="fa-solid fa-bolt text-amber-500 mr-1.5"></i>Snappy Short Reels</span>
+                        <span class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm"><i class="fa-solid fa-desktop text-indigo-500 mr-1.5"></i>SaaS Product Promos</span>
+                        <span class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm"><i class="fa-solid fa-wand-magic-sparkles text-purple-500 mr-1.5"></i>Motion Graphics</span>
+                        <span class="px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm"><i class="fa-solid fa-image text-teal-500 mr-1.5"></i>Thumbnails & Branding</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+                        <a href="#reels-section" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-sm transition-all shadow-lg shadow-indigo-600/25 flex items-center justify-center gap-2">
+                            <span>Watch Video Reels</span>
+                            <i class="fa-solid fa-play text-xs"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-sm transition-all border border-slate-300/80 shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-envelope text-indigo-600"></i>
+                            <span>Get A Custom Quote</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Feature Display -->
+                <div class="lg:col-span-5">
+                    <div class="studio-card p-6 rounded-3xl relative overflow-hidden shadow-xl border border-slate-200">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-200/80 mb-4 text-xs font-bold text-slate-600">
+                            <span class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                                <span class="text-slate-900 font-extrabold uppercase">Featured Edit</span>
+                            </span>
+                            <span class="bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-lg font-mono">1080p • 60 FPS</span>
+                        </div>
+
+                        <!-- Hero Playable Video Player -->
+                        <div class="relative rounded-2xl overflow-hidden aspect-video bg-slate-900 group shadow-md cursor-pointer" id="heroVideoContainer">
+                            <video id="heroFeatureVideo" class="w-full h-full object-cover" playsinline loop muted autoplay poster="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80">
+                                <source src="https://raw.githubusercontent.com/sassyratul64-lgtm/Projects/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                            
+                            <!-- Overlay Control Button -->
+                            <div id="heroPlayBtn" class="absolute inset-0 bg-slate-950/20 hover:bg-slate-950/10 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                <div class="w-14 h-14 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xl shadow-xl transform group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-pause" id="heroPlayIcon"></i>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-3 left-3 right-3 p-3 bg-slate-900/80 backdrop-blur-md rounded-xl text-white flex justify-between items-center text-xs pointer-events-auto">
+                                <div>
+                                    <p class="font-bold">SaaS Promo & App Walkthrough</p>
+                                    <p class="text-[11px] text-slate-300">Tap anywhere to play/pause</p>
+                                </div>
+                                <button id="heroMuteBtn" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
+                                    <i class="fa-solid fa-volume-xmark" id="heroMuteIcon"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Stats Banner -->
+                        <div class="grid grid-cols-3 gap-3 mt-4 text-center">
+                            <div class="bg-slate-100 p-3 rounded-2xl">
+                                <div class="text-indigo-600 font-syne font-extrabold text-xl">100+</div>
+                                <div class="text-[11px] font-bold text-slate-600">Reels Cut</div>
+                            </div>
+                            <div class="bg-slate-100 p-3 rounded-2xl">
+                                <div class="text-purple-600 font-syne font-extrabold text-xl">30+</div>
+                                <div class="text-[11px] font-bold text-slate-600">SaaS Ads</div>
+                            </div>
+                            <div class="bg-slate-100 p-3 rounded-2xl">
+                                <div class="text-emerald-600 font-syne font-extrabold text-xl">100%</div>
+                                <div class="text-[11px] font-bold text-slate-600">Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REELS INTERACTIVE SHOWCASE SECTION -->
+    <section id="reels-section" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-2">
+                        <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+                        <span>Interactive Video Feed</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold font-syne text-white">Vertical Video Reels</h2>
+                    <p class="text-slate-400 text-sm mt-2">Scroll or click up/down. Videos automatically play when centered in the frame.</p>
+                </div>
+
+                <!-- Category Filter Pills -->
+                <div class="flex flex-wrap gap-2" id="reelsFilters">
+                    <button data-filter="all" class="reel-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 text-white transition-all shadow-md">All Clips</button>
+                    <button data-filter="reels" class="reel-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-all">Short Reels</button>
+                    <button data-filter="saas" class="reel-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-all">SaaS Demos</button>
+                    <button data-filter="animation" class="reel-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-all">Motion Graphics</button>
+                </div>
+            </div>
+
+            <!-- REELS SHOWCASE COMPONENT -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Main Vertical Reel Frame -->
+                <div class="lg:col-span-6 xl:col-span-5 mx-auto w-full max-w-sm">
+                    <div class="relative bg-black rounded-[32px] p-2 border-4 border-slate-800 shadow-2xl overflow-hidden">
+                        
+                        <!-- Top Bar -->
+                        <div class="absolute top-4 left-0 right-0 z-30 flex items-center justify-between px-6 text-xs text-white/80 pointer-events-none">
+                            <span class="font-bold flex items-center gap-1.5">
+                                <i class="fa-solid fa-play text-red-500 text-[10px]"></i>
+                                REELS FEED
+                            </span>
+                            <span id="reelIndexCounter" class="bg-black/60 px-2.5 py-0.5 rounded-full backdrop-blur-md text-[11px] font-mono">1 / 7</span>
+                        </div>
+
+                        <!-- Swipeable Reels Scroll Viewport -->
+                        <div id="reelsViewport" class="reels-viewport space-y-0">
+                            <!-- Dynamically populated reel cards -->
+                        </div>
+
+                        <!-- Reels Navigation Controls -->
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-3">
+                            <button id="prevReelBtn" class="w-10 h-10 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-white flex items-center justify-center hover:bg-indigo-600 transition-colors shadow-lg">
+                                <i class="fa-solid fa-chevron-up text-xs"></i>
+                            </button>
+                            <button id="nextReelBtn" class="w-10 h-10 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-white flex items-center justify-center hover:bg-indigo-600 transition-colors shadow-lg">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Reel Details Display Card -->
+                <div class="lg:col-span-6 xl:col-span-7 space-y-6">
+                    <div id="reelDetailCard" class="dark-studio-card p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-5">
+                        <div class="flex items-center gap-3">
+                            <span id="reelCategoryBadge" class="px-3 py-1 rounded-lg bg-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider border border-indigo-500/30">
+                                Short Reel
+                            </span>
+                            <span id="reelTagBadge" class="text-xs text-slate-400 font-mono">
+                                • Premiere Pro & CapCut
+                            </span>
+                        </div>
+
+                        <h3 id="reelTitle" class="text-2xl sm:text-3xl font-extrabold font-syne text-white leading-snug">
+                            Viral Short Reel — High Pacing & Captions
+                        </h3>
+
+                        <p id="reelDescription" class="text-slate-300 text-sm leading-relaxed">
+                            Fast-paced jump cuts, dynamic subtitle animations, sound effects, and sound balancing designed to hold viewer attention for over 80% duration.
+                        </p>
+
+                        <!-- Quick Specs -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
+                            <div class="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60">
+                                <span class="text-slate-400 block text-[10px]">ASPECT RATIO</span>
+                                <span class="text-white font-bold">9:16 Vertical</span>
+                            </div>
+                            <div class="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60">
+                                <span class="text-slate-400 block text-[10px]">RETENTION GOAL</span>
+                                <span class="text-emerald-400 font-bold">75%+ Completion</span>
+                            </div>
+                            <div class="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 col-span-2 sm:col-span-1">
+                                <span class="text-slate-400 block text-[10px]">SOFTWARE</span>
+                                <span class="text-indigo-300 font-bold">AE / Premiere</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex items-center gap-2 text-xs text-slate-400">
+                                <i class="fa-solid fa-hand-pointer text-indigo-400 animate-bounce"></i>
+                                <span>Scroll or tap video to toggle play/pause</span>
+                            </div>
+
+                            <a href="#contact" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-xs transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Order Similar Video</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GRAPHICS & DESIGN SHOWCASE SECTION -->
+    <section id="graphics-section" class="py-20 bg-slate-100 relative border-t border-slate-200 grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-purple-600 text-xs font-bold uppercase tracking-widest mb-2">
+                        <i class="fa-solid fa-palette text-sm"></i>
+                        <span>Visual Assets Gallery</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold font-syne text-slate-900">Graphic Design & Thumbnails</h2>
+                    <p class="text-slate-600 text-sm mt-2">High-CTR YouTube thumbnails, promotional banners, and custom social media branding.</p>
+                </div>
+
+                <!-- Category Filter Pills -->
+                <div class="flex flex-wrap gap-2" id="graphicsFilters">
+                    <button data-gfx-filter="all" class="gfx-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-purple-600 text-white transition-all shadow-md">All Graphics</button>
+                    <button data-gfx-filter="thumbnails" class="gfx-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition-all border border-slate-300">YouTube Thumbnails</button>
+                    <button data-gfx-filter="banners" class="gfx-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition-all border border-slate-300">Banners & Posters</button>
+                    <button data-gfx-filter="branding" class="gfx-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition-all border border-slate-300">Branding Kits</button>
+                </div>
+            </div>
+
+            <!-- GRAPHICS GRID -->
+            <div id="graphicsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically populated via JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 bg-slate-50 relative border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-indigo-600 text-xs font-bold uppercase tracking-widest mb-2">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>What I Do Best</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-syne text-slate-900">Video & Design Services</h2>
+                <p class="text-slate-600 text-sm mt-3">Practical visual solutions focused on clarity, engagement, and getting real results for your content.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="studio-card p-6 rounded-3xl hover:border-indigo-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-2">Reels & Short Clips</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            High-energy TikTok, YouTube Shorts, and Instagram Reels with animated text hooks, sound effects, and velocity cuts.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-2 font-medium border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Dynamic Captions</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> SFX Layering</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> B-Roll Pop-ups</li>
+                    </ul>
+                </div>
+
+                <div class="studio-card p-6 rounded-3xl hover:border-purple-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-2">SaaS & Product Demos</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Clear software promotional videos, landing page explainers, and animated UI screen recordings.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-2 font-medium border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500"></i> UI Zoom & Cursor Motion</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500"></i> Voiceover Syncing</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500"></i> Callout Animations</li>
+                    </ul>
+                </div>
+
+                <div class="studio-card p-6 rounded-3xl hover:border-pink-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-2">Motion Graphics</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Custom title reveals, lower thirds, logo intros, kinetic typography, and animated overlays built in After Effects.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-2 font-medium border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500"></i> Logo Stings & Intros</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500"></i> Kinetic Typography</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500"></i> Keyframe Transitions</li>
+                    </ul>
+                </div>
+
+                <div class="studio-card p-6 rounded-3xl hover:border-teal-500/50 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-syne text-slate-900 mb-2">Thumbnails & Graphics</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            High-CTR YouTube thumbnails, channel banners, social media design kits, and clean vector graphics that grab clicks.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-700 space-y-2 font-medium border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500"></i> High-CTR YouTube Thumbnails</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500"></i> Photo Editing & Cutouts</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-500"></i> Social Media Branding Kits</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="py-20 bg-white relative border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-indigo-600 text-xs font-bold uppercase tracking-widest mb-2">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Client Feedback</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold font-syne text-slate-900">What Clients Say</h2>
+                </div>
+                <div class="flex items-center gap-2 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-200 text-xs font-bold text-amber-800">
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <span>5.0 Rating Across All Projects</span>
+                </div>
+            </div>
+
+            <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-gradient-to-b from-slate-900 to-slate-950 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-indigo-400 text-xs font-bold uppercase tracking-widest mb-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Direct Inquiry</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold font-syne text-white leading-tight">Need a Video Edited? Let's Talk.</h2>
+                        <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+                            Got a quick short reel project or a full SaaS promo video in mind? Send me your project specs and deadline. I respond quickly.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 pt-2">
+                        <a href="mailto:sassyratul64@gmail.com" class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 hover:border-indigo-500 transition-all flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-mono text-slate-400 uppercase block">Direct Email</span>
+                                <span class="text-white font-bold text-sm group-hover:text-indigo-400 transition-colors">sassyratul64@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="dark-studio-card p-8 rounded-3xl border border-slate-800 shadow-2xl">
+                        <h3 class="text-xl font-bold font-syne text-white mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-message text-indigo-400"></i>
+                            Send Message
+                        </h3>
+
+                        <form id="contactForm" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-300 mb-1.5">YOUR NAME</label>
+                                    <input type="text" required id="contactName" placeholder="e.g. Alex Miller" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-300 mb-1.5">EMAIL ADDRESS</label>
+                                    <input type="email" required id="contactEmail" placeholder="alex@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-300 mb-1.5">PROJECT CATEGORY</label>
+                                <select id="contactType" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+                                    <option value="Short Reels Edit">Short Reels Edit (TikTok/Instagram)</option>
+                                    <option value="SaaS Promo Video">SaaS Demo / Explainer Video</option>
+                                    <option value="Motion Graphics Animation">Motion Graphics Animation</option>
+                                    <option value="Graphics & Thumbnails">Graphics & YouTube Thumbnails</option>
+                                    <option value="Other Project">Other Video Project</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-300 mb-1.5">PROJECT SCOPE</label>
+                                <textarea id="contactMessage" required rows="4" placeholder="Tell me about your video length, reference links, and deadline..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500 resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-sm transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-8 text-xs text-slate-500 font-medium">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © 2026 Tafhimul Islam Ratul. All rights reserved.
+            </div>
+            <div>
+                <a href="mailto:sassyratul64@gmail.com" class="text-slate-400 hover:text-indigo-400 transition-colors">sassyratul64@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX IMAGE PREVIEW MODAL -->
+    <div id="imageLightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+            <button id="closeLightboxBtn" class="absolute -top-12 right-0 text-white text-2xl hover:text-purple-400 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightboxImg" src="" alt="Graphic Preview" class="max-h-[80vh] w-auto object-contain rounded-2xl shadow-2xl border border-slate-800">
+            <div class="mt-4 text-center">
+                <h4 id="lightboxTitle" class="text-white font-bold font-syne text-lg"></h4>
+                <p id="lightboxDesc" class="text-slate-400 text-xs mt-1 max-w-lg"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 dark-studio-card border border-indigo-500/40 px-5 py-3 rounded-2xl text-xs font-bold text-white hidden flex items-center gap-3 shadow-2xl">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+        <span id="toastMsg">Action completed successfully.</span>
+    </div>
+
+    <!-- PORTFOLIO INTERACTION ENGINE & DATA -->
+    <script>
+        // Initial Portfolio Datasets
+        const initialReels = [
+            {
+                id: 'reel-1',
+                title: 'Viral Short Reel — High Pacing & Captions',
+                category: 'reels',
+                tag: 'Premiere Pro • CapCut',
+                videoUrl: 'https://raw.githubusercontent.com/sassyratul64-lgtm/Projects/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4',
+                posterUrl: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80',
+                description: 'Fast-paced jump cuts, dynamic subtitle animations, sound effects, and sound balancing designed to hold viewer attention for over 80% duration.'
+            },
+            {
+                id: 'reel-2',
+                title: 'SaaS App Walkthrough & Motion Promo',
+                category: 'saas',
+                tag: 'After Effects • Screen UI',
+                videoUrl: 'https://raw.githubusercontent.com/sassyratul64-lgtm/Projects/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4',
+                posterUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+                description: 'Smooth cursor animations, UI zooms, feature highlights, and clean modern background gradients for software tools.'
+            },
+            {
+                id: 'reel-3',
+                title: 'Kinetic Typography & Sound FX',
+                category: 'animation',
+                tag: 'After Effects Motion Graphics',
+                videoUrl: 'https://raw.githubusercontent.com/sassyratul64-lgtm/Projects/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4',
+                posterUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80',
+                description: 'Energetic text animations synced to punchy sound effects and rhythm cuts for high-conversion social media ads.'
+            },
+            {
+                id: 'reel-4',
+                title: 'E-Commerce Product Reel Highlight',
+                category: 'reels',
+                tag: 'Short Reels • Color Graded',
+                videoUrl: 'https://raw.githubusercontent.com/sassyratul64-lgtm/Projects/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4',
+                posterUrl: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80',
+                description: 'Sleek product showcase cuts, custom color grading, and dynamic text overlays crafted for Instagram Reels & TikTok ads.'
+            },
+            {
+                id: 'reel-5',
+                title: 'Creator Vlog Jump Cut & SFX',
+                category: 'reels',
+                tag: 'YouTube Shorts • Fast Cuts',
+                videoUrl: 'https://raw.githubusercontent.com/sassyratul64-lgtm/Projects/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4',
+                posterUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80',
+                description: 'Engaging content creator edit with zooms, meme popups, sound effects, and retention-focused storytelling.'
+            },
+            {
+                id: 'reel-6',
+                title: 'Animated Explainer & UI Callouts',
+                category: 'saas',
+                tag: 'AE Vector Graphics • Explainer',
+                videoUrl: 'https://raw.githubusercontent.com/sassyratul64-lgtm/Projects/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4',
+                posterUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+                description: 'Clean isometric and vector animated callouts highlighting key product metrics and value propositions.'
+            },
+            {
+                id: 'reel-7',
+                title: 'Podcast Clip & Dynamic Subtitles',
+                category: 'animation',
+                tag: 'Auto-Captions • Audio Waveform',
+                videoUrl: 'https://raw.githubusercontent.com/sassyratul64-lgtm/Projects/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4',
+                posterUrl: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',
+                description: 'Stylized multi-speaker podcast reel with animated word-by-word subtitles and dynamic audio visualizer overlays.'
+            }
+        ];
+
+        const initialGraphics = [
+            {
+                id: 'gfx-1',
+                title: 'High-CTR Tech Explainer Thumbnail',
+                category: 'thumbnails',
+                tag: 'Photoshop • 1080p',
+                imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+                description: 'High contrast typography, glow effects, and expressive subject cutout designed for maximum YouTube click-through rate.'
+            },
+            {
+                id: 'gfx-2',
+                title: 'Dark Mode SaaS Promo Banner',
+                category: 'banners',
+                tag: 'Figma • Illustrator',
+                imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80',
+                description: 'Sleek dark gradient banner with crisp typography and custom UI mockups for social media marketing.'
+            },
+            {
+                id: 'gfx-3',
+                title: 'Gaming & Stream Channel Branding',
+                category: 'branding',
+                tag: 'Branding Kit • Vector',
+                imageUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80',
+                description: 'Cohesive channel overlay package including stream offline banner, avatar, and social media header templates.'
+            },
+            {
+                id: 'gfx-4',
+                title: 'Podcast & Interview Cover Graphic',
+                category: 'banners',
+                tag: 'Photoshop • Typography',
+                imageUrl: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',
+                description: 'Bold title treatment with subtle texture overlays created for Spotify & Apple Podcast artwork.'
+            },
+            {
+                id: 'gfx-5',
+                title: 'Finance & Crypto YouTube Thumbnail',
+                category: 'thumbnails',
+                tag: 'High CTR Design',
+                imageUrl: 'https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&w=800&q=80',
+                description: 'Vibrant color pop, 3D icon elements, and high clarity headline text optimized for small mobile screens.'
+            },
+            {
+                id: 'gfx-6',
+                title: 'Social Media Campaign Poster Kit',
+                category: 'branding',
+                tag: 'Instagram & Twitter Pack',
+                imageUrl: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80',
+                description: 'Clean vector layouts and grid composition for promotional product launches.'
+            }
+        ];
+
+        const initialReviews = [
+            {
+                id: 'rev-1',
+                name: 'Alex Rivera',
+                role: 'Founder @ SaaS Flow',
+                avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80',
+                comment: 'Tafhimul delivered our app promo video ahead of schedule. The pacing and smooth motion graphics increased our trial signups immediately!'
+            },
+            {
+                id: 'rev-2',
+                name: 'Marcus Vance',
+                role: 'YouTube Creator (250k Subs)',
+                avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
+                comment: 'His short reels editing style boosted our retention rates significantly. Cuts are clean, subtitles are punchy, and the SFX selection is top notch.'
+            },
+            {
+                id: 'rev-3',
+                name: 'Elena Rostova',
+                role: 'Marketing Lead @ VisualPulse',
+                avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
+                comment: 'Incredible speed and attention to detail. Tafhimul created both our promo reel and YouTube thumbnails with matching high-end polish.'
+            }
+        ];
+
+        let stateReels = [...initialReels];
+        let stateGraphics = [...initialGraphics];
+        let stateReviews = [...initialReviews];
+        
+        let currentFilter = 'all';
+        let currentGfxFilter = 'all';
+        let reelObserver = null;
+
+        // Render Vertical Video Reels Feed
+        function renderReels() {
+            const viewport = document.getElementById('reelsViewport');
+            if (!viewport) return;
+
+            const filtered = currentFilter === 'all' 
+                ? stateReels 
+                : stateReels.filter(r => r.category === currentFilter);
+
+            if (filtered.length === 0) {
+                viewport.innerHTML = `
+                    <div class="h-full flex items-center justify-center text-slate-500 text-xs font-mono p-6 text-center">
+                        No video reels in this category.
+                    </div>
+                `;
+                document.getElementById('reelIndexCounter').textContent = '0 / 0';
+                return;
+            }
+
+            viewport.innerHTML = filtered.map((reel, idx) => `
+                <div class="reel-card w-full flex items-center justify-center bg-black relative group" data-reel-id="${reel.id}" data-index="${idx}">
+                    <video 
+                        class="reel-video-element w-full h-full object-cover cursor-pointer" 
+                        playsinline 
+                        loop 
+                        muted 
+                        poster="${reel.posterUrl}"
+                    >
+                        <source src="${reel.videoUrl}" type="video/mp4">
+                        Your browser does not support video play.
+                    </video>
+
+                    <!-- Play/Pause Big Center Overlay Indicator -->
+                    <div class="reel-play-indicator absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                        <div class="w-14 h-14 rounded-full bg-indigo-600/90 text-white flex items-center justify-center text-xl shadow-xl">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                    </div>
+
+                    <!-- Audio Toggle Button -->
+                    <button class="reel-mute-btn absolute top-12 right-4 z-20 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white flex items-center justify-center text-xs hover:bg-indigo-600 transition-colors">
+                        <i class="fa-solid fa-volume-xmark"></i>
+                    </button>
+
+                    <!-- Reel Bottom Info Overlay -->
+                    <div class="absolute bottom-6 left-4 right-14 z-20 space-y-1.5 text-left pointer-events-none">
+                        <span class="px-2.5 py-0.5 rounded-md bg-indigo-600/90 text-[10px] font-bold uppercase tracking-wider text-white inline-block">
+                            ${reel.category}
+                        </span>
+                        <h4 class="font-syne font-bold text-white text-sm leading-tight drop-shadow-md">
+                            ${reel.title}
+                        </h4>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('reelIndexCounter').textContent = `1 / ${filtered.length}`;
+            setupReelsIntersectionObserver();
+
+            // Update Detail Card with first item
+            if (filtered.length > 0) {
+                updateReelDetailCard(filtered[0]);
+            }
+        }
+
+        // Setup Intersection Observer for automatic video playback on scroll
+        function setupReelsIntersectionObserver() {
+            if (reelObserver) {
+                reelObserver.disconnect();
+            }
+
+            const options = {
+                root: document.getElementById('reelsViewport'),
+                threshold: 0.6
+            };
+
+            reelObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target.querySelector('video');
+                    const reelId = entry.target.getAttribute('data-reel-id');
+                    const index = parseInt(entry.target.getAttribute('data-index') || '0', 10);
+                    const filtered = currentFilter === 'all' ? stateReels : stateReels.filter(r => r.category === currentFilter);
+
+                    if (entry.isIntersecting) {
+                        if (video) {
+                            video.play().catch(() => {});
+                        }
+                        
+                        // Update Index Indicator & Detail Box
+                        document.getElementById('reelIndexCounter').textContent = `${index + 1} / ${filtered.length}`;
+                        const reelObj = filtered.find(r => r.id === reelId);
+                        if (reelObj) {
+                            updateReelDetailCard(reelObj);
+                        }
+                    } else {
+                        if (video) {
+                            video.pause();
+                        }
+                    }
+                });
+            }, options);
+
+            document.querySelectorAll('.reel-card').forEach(card => {
+                reelObserver.observe(card);
+            });
+
+            // Tap Video to Toggle Play/Pause & Audio
+            document.querySelectorAll('.reel-card').forEach(card => {
+                const video = card.querySelector('video');
+                const muteBtn = card.querySelector('.reel-mute-btn');
+
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('.reel-mute-btn')) return;
+                    if (!video) return;
+
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+
+                muteBtn?.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (!video) return;
+                    video.muted = !video.muted;
+                    const icon = muteBtn.querySelector('i');
+                    if (icon) {
+                        icon.className = video.muted ? 'fa-solid fa-volume-xmark' : 'fa-solid fa-volume-high text-indigo-400';
+                    }
+                });
+            });
+        }
+
+        function updateReelDetailCard(reel) {
+            document.getElementById('reelTitle').textContent = reel.title;
+            document.getElementById('reelDescription').textContent = reel.description;
+            document.getElementById('reelCategoryBadge').textContent = reel.category;
+            document.getElementById('reelTagBadge').textContent = `• ${reel.tag || 'Premiere & CapCut'}`;
+        }
+
+        // Render Graphics Showcase Grid
+        function renderGraphics() {
+            const grid = document.getElementById('graphicsGrid');
+            if (!grid) return;
+
+            const filtered = currentGfxFilter === 'all'
+                ? stateGraphics
+                : stateGraphics.filter(g => g.category === currentGfxFilter);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-slate-500 text-xs font-mono">
+                        No graphic designs in this category.
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(g => `
+                <div class="studio-card rounded-3xl overflow-hidden group hover:border-purple-500/60 transition-all duration-300 flex flex-col justify-between border border-slate-200 shadow-sm cursor-pointer relative" onclick="window.openGraphicLightbox('${g.imageUrl}', '${g.title.replace(/'/g, "\\'")}', '${g.description.replace(/'/g, "\\'")}')">
+                    
+                    <div class="relative aspect-video overflow-hidden bg-slate-900">
+                        <img src="${g.imageUrl}" alt="${g.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="w-10 h-10 rounded-full bg-white/90 text-purple-600 flex items-center justify-center text-sm shadow-lg">
+                                <i class="fa-solid fa-expand"></i>
+                            </span>
+                        </div>
+                        <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-purple-300 border border-purple-500/30 px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider">
+                            ${g.category}
+                        </span>
+                    </div>
+
+                    <div class="p-5 space-y-2">
+                        <div class="text-[11px] font-mono text-slate-500">${g.tag || 'Photoshop Design'}</div>
+                        <h3 class="text-base font-bold font-syne text-slate-900 line-clamp-1 group-hover:text-purple-600 transition-colors">${g.title}</h3>
+                        <p class="text-slate-600 text-xs line-clamp-2 leading-relaxed">${g.description}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render Reviews Grid
+        function renderReviews() {
+            const grid = document.getElementById('reviewsGrid');
+            if (!grid) return;
+
+            grid.innerHTML = stateReviews.map(r => `
+                <div class="studio-card p-6 rounded-3xl border border-slate-200/80 hover:border-indigo-500/40 transition-all flex flex-col justify-between space-y-4">
+                    <p class="text-xs text-slate-700 leading-relaxed italic">"${r.comment}"</p>
+                    <div class="flex items-center gap-3 pt-3 border-t border-slate-200/80">
+                        <img src="${r.avatar}" alt="${r.name}" class="w-10 h-10 rounded-full object-cover border border-indigo-200">
+                        <div>
+                            <h4 class="font-bold text-xs font-syne text-slate-900">${r.name}</h4>
+                            <p class="text-[10px] text-indigo-600 font-semibold">${r.role}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Open Graphic Lightbox
+        window.openGraphicLightbox = function(url, title, desc) {
+            const modal = document.getElementById('imageLightboxModal');
+            const img = document.getElementById('lightboxImg');
+            const titleEl = document.getElementById('lightboxTitle');
+            const descEl = document.getElementById('lightboxDesc');
+
+            if (!modal || !img) return;
+
+            img.src = url;
+            titleEl.textContent = title;
+            descEl.textContent = desc;
+
+            modal.classList.remove('hidden');
+        };
+
+        document.getElementById('closeLightboxBtn')?.addEventListener('click', () => {
+            document.getElementById('imageLightboxModal')?.classList.add('hidden');
+        });
+
+        document.getElementById('imageLightboxModal')?.addEventListener('click', () => {
+            document.getElementById('imageLightboxModal')?.classList.add('hidden');
+        });
+
+        // Filter Buttons Listeners
+        document.querySelectorAll('.reel-filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.reel-filter-btn').forEach(b => {
+                    b.className = 'reel-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-all';
+                });
+                btn.className = 'reel-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 text-white transition-all shadow-md';
+                
+                currentFilter = btn.getAttribute('data-filter') || 'all';
+                renderReels();
+            });
+        });
+
+        document.querySelectorAll('.gfx-filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.gfx-filter-btn').forEach(b => {
+                    b.className = 'gfx-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-200 transition-all border border-slate-300';
+                });
+                btn.className = 'gfx-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-purple-600 text-white transition-all shadow-md';
+                
+                currentGfxFilter = btn.getAttribute('data-gfx-filter') || 'all';
+                renderGraphics();
+            });
+        });
+
+        // Next/Prev Reel Controls
+        const viewport = document.getElementById('reelsViewport');
+        document.getElementById('prevReelBtn')?.addEventListener('click', () => {
+            viewport?.scrollBy({ top: -640, behavior: 'smooth' });
+        });
+
+        document.getElementById('nextReelBtn')?.addEventListener('click', () => {
+            viewport?.scrollBy({ top: 640, behavior: 'smooth' });
+        });
+
+        // Initialize Renderers
+        renderReels();
+        renderGraphics();
+        renderReviews();
+    </script>
+
+    <!-- UI INTERACTION HELPERS -->
+    <script>
+        // Web Audio API Touch / Click Synthesizer
+        let touchAudioCtx = null;
+        function playTouchClickSound() {
+            try {
+                if (!touchAudioCtx) {
+                    touchAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if (touchAudioCtx.state === 'suspended') {
+                    touchAudioCtx.resume();
+                }
+                const osc = touchAudioCtx.createOscillator();
+                const gain = touchAudioCtx.createGain();
+                
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(800, touchAudioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(300, touchAudioCtx.currentTime + 0.035);
+                
+                gain.gain.setValueAtTime(0.12, touchAudioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, touchAudioCtx.currentTime + 0.035);
+                
+                osc.connect(gain);
+                gain.connect(touchAudioCtx.destination);
+                
+                osc.start();
+                osc.stop(touchAudioCtx.currentTime + 0.035);
+            } catch (err) {
+                // Ignore if audio context suspended
+            }
+        }
+
+        document.addEventListener('click', () => {
+            playTouchClickSound();
+        }, { passive: true });
+
+        // Global Toast Notification Helper
+        window.showToast = function(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            if (!toast || !toastMsg) return;
+            toastMsg.textContent = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3500);
+        };
+
+        // Hero Feature Video Player Controls
+        const heroVideo = document.getElementById('heroFeatureVideo');
+        const heroVideoContainer = document.getElementById('heroVideoContainer');
+        const heroPlayBtn = document.getElementById('heroPlayBtn');
+        const heroPlayIcon = document.getElementById('heroPlayIcon');
+        const heroMuteBtn = document.getElementById('heroMuteBtn');
+        const heroMuteIcon = document.getElementById('heroMuteIcon');
+
+        if (heroVideo && heroVideoContainer) {
+            heroVideoContainer.addEventListener('click', () => {
+                if (heroVideo.paused) {
+                    heroVideo.play().then(() => {
+                        if (heroPlayIcon) heroPlayIcon.className = 'fa-solid fa-pause';
+                        if (heroPlayBtn) heroPlayBtn.classList.add('opacity-0');
+                    }).catch(err => console.log('Hero video play request handled', err));
+                } else {
+                    heroVideo.pause();
+                    if (heroPlayIcon) heroPlayIcon.className = 'fa-solid fa-play ml-1';
+                    if (heroPlayBtn) heroPlayBtn.classList.remove('opacity-0');
+                }
+            });
+        }
+
+        if (heroMuteBtn && heroVideo) {
+            heroMuteBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                heroVideo.muted = !heroVideo.muted;
+                if (heroMuteIcon) {
+                    heroMuteIcon.className = heroVideo.muted 
+                        ? 'fa-solid fa-volume-xmark' 
+                        : 'fa-solid fa-volume-high text-indigo-400';
+                }
+            });
+        }
+
+        // Contact Form Handler
+        document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.showToast?.('Inquiry submitted successfully! I will reply shortly.');
+            e.target.reset();
+        });
+
+        // Mobile Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileDrawer?.classList.toggle('hidden');
+        });
+    </script>
+</body>
+    </html>    <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-syne {
+            font-family: 'Syne', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366f1;
+        }
+
+        /* Reels Player Container Styles */
+        .reels-viewport {
+            height: 640px;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE/Edge */
+            border-radius: 24px;
+        }
+        .reels-viewport::-webkit-scrollbar {
+            display: none;
+        }
+
+        .reel-card {
+            scroll-snap-align: start;
+            height: 640px;
+            position: relative;
+        }
+
+        /* Soft Background Patterns */
+        .grid-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Glassmorphic elements */
+        .studio-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+        }
+
+        .dark-studio-card {
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="selection:bg-indigo-500 selection:text-white">
+
     <!-- AUTHOR MODE ACTIVE BANNER (Hidden by default) -->
     <div id="authorBanner" class="hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 text-white text-xs py-2 px-4 border-b border-purple-500/30 sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
