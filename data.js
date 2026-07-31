@@ -15,8 +15,8 @@ const PORTFOLIO_DATA = {
             category: "Short Reels",
             title: "Retention Hook Masterclass",
             description: "High-energy fast cuts, dynamic auto-captions, and sound design created for a tech creator short.",
-            videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            poster: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80",
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4",
+            poster: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4",
             tags: ["Premiere Pro", "After Effects", "Sound Design"],
             retentionGoal: "82% @ 30s",
             aspectRatio: "9:16 Vertical"
@@ -26,8 +26,8 @@ const PORTFOLIO_DATA = {
             category: "SaaS Demos",
             title: "AI App Showcase Reel",
             description: "Smooth UI kinetic typography, isometric screen renders, and sleek transitions for SaaS launch.",
-            videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-            poster: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/243e5ebede5c65bb7887d93e3c55bcd7_720w.mp4",
+            poster: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/243e5ebede5c65bb7887d93e3c55bcd7_720w.mp4",
             tags: ["After Effects", "Figma", "Sound Effects"],
             retentionGoal: "78% @ 45s",
             aspectRatio: "9:16 Vertical"
