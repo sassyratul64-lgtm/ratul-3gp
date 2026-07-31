@@ -15,7 +15,7 @@ const PORTFOLIO_DATA = {
             title: "Retention Hook Masterclass",
             description: "High-energy fast cuts, dynamic auto-captions, and sound design created for a tech creator short.",
             // You can now paste raw URLs OR GitHub permalinks!
-            videoUrl: "https://github.com/your-username/your-repo/blob/main/videos/reel1.mp4",
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/243e5ebede5c65bb7887d93e3c55bcd7_720w.mp4",
             tags: ["Premiere Pro", "After Effects", "Sound Design"],
             retentionGoal: "82% @ 30s",
             aspectRatio: "9:16 Vertical"
