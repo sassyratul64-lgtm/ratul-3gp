@@ -21,11 +21,66 @@ const PORTFOLIO_DATA = {
             aspectRatio: "9:16 Vertical"
         },
         {
+            id: "reel-3",
+            category: "Short Reels",
+            title: "Retention Hook Masterclass",
+            description: "High-energy fast cuts, dynamic auto-captions, and sound design created for a tech creator short.",
+            // You can now paste raw URLs OR GitHub permalinks!
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/2e6c9fcb7d1e37b4bd3fba17939beee1_720w.mp4",
+            tags: ["Premiere Pro", "After Effects", "Sound Design"],
+            retentionGoal: "82% @ 30s",
+            aspectRatio: "9:16 Vertical"
+        },
+        {
+            id: "reel-4",
+            category: "Short Reels",
+            title: "Retention Hook Masterclass",
+            description: "High-energy fast cuts, dynamic auto-captions, and sound design created for a tech creator short.",
+            // You can now paste raw URLs OR GitHub permalinks!
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/adb012c9e1ce736c2fa8088b8745acf8_720w.mp4",
+            tags: ["Premiere Pro", "After Effects", "Sound Design"],
+            retentionGoal: "82% @ 30s",
+            aspectRatio: "9:16 Vertical"
+        },
+        {
+            id: "reel-5",
+            category: "Short Reels",
+            title: "Retention Hook Masterclass",
+            description: "High-energy fast cuts, dynamic auto-captions, and sound design created for a tech creator short.",
+            // You can now paste raw URLs OR GitHub permalinks!
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/b3c7cc819c48a06164e36b26b4780a80_720w%20(1).mp4",
+            tags: ["Premiere Pro", "After Effects", "Sound Design"],
+            retentionGoal: "82% @ 30s",
+            aspectRatio: "9:16 Vertical"
+        },
+        {
+            id: "reel-6",
+            category: "Short Reels",
+            title: "Retention Hook Masterclass",
+            description: "High-energy fast cuts, dynamic auto-captions, and sound design created for a tech creator short.",
+            // You can now paste raw URLs OR GitHub permalinks!
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/b3c7cc819c48a06164e36b26b4780a80_720w.mp4",
+            tags: ["Premiere Pro", "After Effects", "Sound Design"],
+            retentionGoal: "82% @ 30s",
+            aspectRatio: "9:16 Vertical"
+        },
+        {
+            id: "reel-7",
+            category: "Short Reels",
+            title: "Retention Hook Masterclass",
+            description: "High-energy fast cuts, dynamic auto-captions, and sound design created for a tech creator short.",
+            // You can now paste raw URLs OR GitHub permalinks!
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/d44ab225a11afa641e73a319e5e5942e_720w.mp4",
+            tags: ["Premiere Pro", "After Effects", "Sound Design"],
+            retentionGoal: "82% @ 30s",
+            aspectRatio: "9:16 Vertical"
+        },
+        {
             id: "reel-2",
             category: "SaaS Demos",
             title: "AI App Showcase Reel",
             description: "Smooth UI kinetic typography, isometric screen renders, and sleek transitions for SaaS launch.",
-            videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+            videoUrl: "https://github.com/sassyratul64-lgtm/Projects/blob/a458d88b630cd1511f80ac1cb9e650d9afc9a9eb/1a16cdfcf9c89c98ca1825260a7b8760_720w.mp4",
             tags: ["After Effects", "Figma", "Sound Effects"],
             retentionGoal: "78% @ 45s",
             aspectRatio: "9:16 Vertical"
@@ -43,7 +98,7 @@ const PORTFOLIO_DATA = {
             category: "YouTube Thumbnails",
             title: "MrBeast Style High-CTR Thumbnail",
             // Direct image URL or GitHub raw image link
-            imageUrl: "https://raw.githubusercontent.com/your-username/your-repo/main/images/thumb1.jpg",
+            imageUrl: "https://www.behance.net/gallery/253249691/Realistic-YouTube-Thumbnail-Design/modules/1471844013",
             ctrStat: "14.2% CTR"
         },
         {
