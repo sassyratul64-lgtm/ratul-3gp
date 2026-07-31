@@ -99,13 +99,13 @@ const PORTFOLIO_DATA = {
             title: "MrBeast Style High-CTR Thumbnail",
             // Direct image URL or GitHub raw image link
             imageUrl: "https://cdn.dribbble.com/userupload/42949825/file/original-393f16cff18e52e703f578904625ba99.jpg?resize=1600x900&vertical=center",
-            ctrStat: "14.2% CTR"
+            ctrStat: "38.2% CTR"
         },
         {
             id: "gfx-2",
             category: "Banners & Posters",
-            title: "Cyberpunk Event Poster Design",
-            imageUrl: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80",
+            title: "Thumbnail Design",
+            imageUrl: "https://cdn.dribbble.com/userupload/42949827/file/original-48b3e99fba4d0cf0311ee15f29485b76.jpg?resize=752x&vertical=center",
             ctrStat: "Poster Print"
         }
     ],
