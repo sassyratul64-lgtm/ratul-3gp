@@ -98,7 +98,7 @@ const PORTFOLIO_DATA = {
             category: "YouTube Thumbnails",
             title: "MrBeast Style High-CTR Thumbnail",
             // Direct image URL or GitHub raw image link
-            imageUrl: "https://www.behance.net/gallery/253249691/Realistic-YouTube-Thumbnail-Design/modules/1471844013",
+            imageUrl: "https://cdn.dribbble.com/userupload/42949825/file/original-393f16cff18e52e703f578904625ba99.jpg?resize=1600x900&vertical=center",
             ctrStat: "14.2% CTR"
         },
         {
