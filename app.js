@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Update copyright year
-    document.getElementById("current-year").textContent = new Date().getFullYear();
+    // Update copyright year automatically
+    const yearEl = document.getElementById("current-year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // -------------------------------------------------------------
-    // HELPER: Convert GitHub Permalink to Direct Streamable Video Link
+    // HELPER: Convert GitHub Permalinks to Streamable Video Links
     // -------------------------------------------------------------
     function resolveVideoUrl(url) {
         if (!url) return "";
-        // Converts github.com/.../blob/... to raw.githubusercontent.com/...
         if (url.includes("github.com") && url.includes("/blob/")) {
             return url
                 .replace("github.com", "raw.githubusercontent.com")
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // -------------------------------------------------------------
-    // WEB AUDIO API SYNTHESIZER
+    // WEB AUDIO API SYNTHESIZER (Click Sound)
     // -------------------------------------------------------------
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     let audioCtx = null;
@@ -70,31 +70,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroMuteIcon = document.getElementById("hero-mute-icon");
 
     if (heroVid) {
-        // Fix hero video GitHub link if needed
         const heroSource = heroVid.querySelector("source");
         if (heroSource) {
             heroSource.src = resolveVideoUrl(heroSource.src);
             heroVid.load();
         }
 
-        heroPlayBtn.addEventListener("click", () => {
-            if (heroVid.paused) {
-                heroVid.play();
-                heroPlayIcon.className = "fa-solid fa-pause ml-0";
-            } else {
-                heroVid.pause();
-                heroPlayIcon.className = "fa-solid fa-play ml-1";
-            }
-        });
+        if (heroPlayBtn && heroPlayIcon) {
+            heroPlayBtn.addEventListener("click", () => {
+                if (heroVid.paused) {
+                    heroVid.play();
+                    heroPlayIcon.className = "fa-solid fa-pause ml-0";
+                } else {
+                    heroVid.pause();
+                    heroPlayIcon.className = "fa-solid fa-play ml-1";
+                }
+            });
+        }
 
-        heroMuteBtn.addEventListener("click", () => {
-            heroVid.muted = !heroVid.muted;
-            heroMuteIcon.className = heroVid.muted ? "fa-solid fa-volume-xmark" : "fa-solid fa-volume-high";
-        });
+        if (heroMuteBtn && heroMuteIcon) {
+            heroMuteBtn.addEventListener("click", () => {
+                heroVid.muted = !heroVid.muted;
+                heroMuteIcon.className = heroVid.muted ? "fa-solid fa-volume-xmark" : "fa-solid fa-volume-high";
+            });
+        }
     }
 
     // -------------------------------------------------------------
-    // RENDER REELS & FILTER LOGIC
+    // RENDER REELS & FILTER LOGIC WITH WORKING SOUND CONTROLS
     // -------------------------------------------------------------
     const reelsViewport = document.getElementById("reels-feed-viewport");
     const reelsFilterContainer = document.getElementById("reels-filter-container");
@@ -129,25 +132,64 @@ document.addEventListener("DOMContentLoaded", () => {
             : PORTFOLIO_DATA.reels.filter(r => r.category === activeReelFilter);
 
         reelsViewport.innerHTML = filtered.map((reel, index) => {
-            // Fix GitHub video links automatically
             const directVideoUrl = resolveVideoUrl(reel.videoUrl);
 
             return `
-                <div class="reel-item relative w-full h-full snap-start flex-shrink-0 bg-slate-950 flex items-center justify-center overflow-hidden" data-index="${index}">
-                    <!-- preload="metadata" & #t=0.1 force the video to render its first frame as the poster -->
+                <div class="reel-item relative w-full h-full snap-start flex-shrink-0 bg-slate-950 flex items-center justify-center overflow-hidden group" data-index="${index}">
+                    <!-- Video automatically extracts first frame as thumbnail -->
                     <video class="reel-video w-full h-full object-cover" loop muted playsinline preload="metadata">
                         <source src="${directVideoUrl}#t=0.1" type="video/mp4">
                     </video>
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20 pointer-events-none"></div>
                     
-                    <button class="reel-play-overlay absolute inset-0 flex items-center justify-center sound-click">
+                    <!-- Sound Toggle Button (Top-Right) -->
+                    <button class="reel-sound-toggle sound-click absolute top-6 right-4 z-20 w-10 h-10 rounded-full bg-slate-900/80 backdrop-blur-md text-slate-200 hover:text-white border border-slate-700/60 flex items-center justify-center transition-transform hover:scale-110">
+                        <i class="fa-solid fa-volume-xmark reel-sound-icon"></i>
+                    </button>
+
+                    <!-- Tap to Play/Pause -->
+                    <button class="reel-play-overlay absolute inset-0 flex items-center justify-center sound-click z-10">
                         <div class="w-12 h-12 rounded-full bg-slate-900/60 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-play reel-play-icon"></i>
                         </div>
                     </button>
                 </div>
             `;
         }).join("");
+
+        // Attach event handlers for each reel
+        document.querySelectorAll(".reel-item").forEach(item => {
+            const video = item.querySelector("video");
+            const soundBtn = item.querySelector(".reel-sound-toggle");
+            const soundIcon = item.querySelector(".reel-sound-icon");
+            const playOverlay = item.querySelector(".reel-play-overlay");
+            const playIcon = item.querySelector(".reel-play-icon");
+
+            if (soundBtn && video) {
+                soundBtn.addEventListener("click", (e) => {
+                    e.stopPropagation(); // Prevents triggering play/pause
+                    video.muted = !video.muted;
+                    
+                    if (video.muted) {
+                        soundIcon.className = "fa-solid fa-volume-xmark reel-sound-icon";
+                    } else {
+                        soundIcon.className = "fa-solid fa-volume-high reel-sound-icon text-indigo-400";
+                    }
+                });
+            }
+
+            if (playOverlay && video) {
+                playOverlay.addEventListener("click", () => {
+                    if (video.paused) {
+                        video.play();
+                        if (playIcon) playIcon.className = "fa-solid fa-pause";
+                    } else {
+                        video.pause();
+                        if (playIcon) playIcon.className = "fa-solid fa-play";
+                    }
+                });
+            }
+        });
 
         setupReelsObserver(filtered);
     }
@@ -156,11 +198,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const counter = document.getElementById("reel-counter");
         if (counter) counter.textContent = `${index + 1}/${total}`;
 
-        document.getElementById("reel-title").textContent = reel.title;
-        document.getElementById("reel-category-tag").textContent = reel.category;
-        document.getElementById("reel-description").textContent = reel.description;
-        document.getElementById("reel-goal").textContent = reel.retentionGoal;
-        document.getElementById("reel-aspect").textContent = reel.aspectRatio;
+        const title = document.getElementById("reel-title");
+        if (title) title.textContent = reel.title;
+
+        const catTag = document.getElementById("reel-category-tag");
+        if (catTag) catTag.textContent = reel.category;
+
+        const desc = document.getElementById("reel-description");
+        if (desc) desc.textContent = reel.description;
+
+        const goal = document.getElementById("reel-goal");
+        if (goal) goal.textContent = reel.retentionGoal;
+
+        const aspect = document.getElementById("reel-aspect");
+        if (aspect) aspect.textContent = reel.aspectRatio;
 
         const tagsContainer = document.getElementById("reel-tags");
         if (tagsContainer) {
@@ -188,6 +239,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { root: reelsViewport, threshold: 0.6 });
 
         items.forEach(item => observer.observe(item));
+    }
+
+    // Up/Down Arrow Buttons for Reels
+    const prevBtn = document.getElementById("reel-prev-btn");
+    const nextBtn = document.getElementById("reel-next-btn");
+
+    if (prevBtn && reelsViewport) {
+        prevBtn.addEventListener("click", () => {
+            reelsViewport.scrollBy({ top: -reelsViewport.clientHeight, behavior: 'smooth' });
+        });
+    }
+
+    if (nextBtn && reelsViewport) {
+        nextBtn.addEventListener("click", () => {
+            reelsViewport.scrollBy({ top: reelsViewport.clientHeight, behavior: 'smooth' });
+        });
     }
 
     // -------------------------------------------------------------
@@ -305,9 +372,24 @@ document.addEventListener("DOMContentLoaded", () => {
         `).join("");
     }
 
-    // -------------------------------------------------------------
+    // Form submission
+    const form = document.getElementById("contact-form");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const toastContainer = document.getElementById("toast-container");
+            if (toastContainer) {
+                const toast = document.createElement("div");
+                toast.className = "bg-indigo-600 text-white px-5 py-3 rounded-2xl shadow-xl font-semibold text-sm flex items-center gap-3 border border-indigo-400/30";
+                toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> Inquiry submitted! I'll reply soon.`;
+                toastContainer.appendChild(toast);
+                setTimeout(() => toast.remove(), 4000);
+            }
+            form.reset();
+        });
+    }
+
     // INITIALIZATION
-    // -------------------------------------------------------------
     renderReelsFilters();
     renderReelsFeed();
     renderGraphicsFilters();
