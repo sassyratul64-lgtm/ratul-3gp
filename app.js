@@ -3,20 +3,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("current-year").textContent = new Date().getFullYear();
 
     // -------------------------------------------------------------
-    // WEB AUDIO API SYNTHESIZER (Touch-Click Sound)
+    // HELPER: Convert GitHub Permalink to Direct Streamable Video Link
+    // -------------------------------------------------------------
+    function resolveVideoUrl(url) {
+        if (!url) return "";
+        // Converts github.com/.../blob/... to raw.githubusercontent.com/...
+        if (url.includes("github.com") && url.includes("/blob/")) {
+            return url
+                .replace("github.com", "raw.githubusercontent.com")
+                .replace("/blob/", "/");
+        }
+        return url;
+    }
+
+    // -------------------------------------------------------------
+    // WEB AUDIO API SYNTHESIZER
     // -------------------------------------------------------------
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     let audioCtx = null;
 
-    function initAudio() {
-        if (!audioCtx) audioCtx = new AudioContext();
-    }
-
     function playClickSound() {
-        initAudio();
-        if (audioCtx.state === 'suspended') {
-            audioCtx.resume();
-        }
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
 
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
@@ -35,11 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
         osc.stop(audioCtx.currentTime + 0.05);
     }
 
-    // Attach click sound listener to interactive elements
     document.addEventListener("click", (e) => {
-        if (e.target.closest(".sound-click")) {
-            playClickSound();
-        }
+        if (e.target.closest(".sound-click")) playClickSound();
     });
 
     // -------------------------------------------------------------
@@ -48,13 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.getElementById("mobile-menu-btn");
     const drawer = document.getElementById("mobile-drawer");
 
-    menuBtn.addEventListener("click", () => {
-        drawer.classList.toggle("hidden");
-    });
-
-    document.querySelectorAll(".mobile-link").forEach(link => {
-        link.addEventListener("click", () => drawer.classList.add("hidden"));
-    });
+    if (menuBtn && drawer) {
+        menuBtn.addEventListener("click", () => drawer.classList.toggle("hidden"));
+        document.querySelectorAll(".mobile-link").forEach(link => {
+            link.addEventListener("click", () => drawer.classList.add("hidden"));
+        });
+    }
 
     // -------------------------------------------------------------
     // HERO FEATURED PLAYER CONTROLS
@@ -66,6 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroMuteIcon = document.getElementById("hero-mute-icon");
 
     if (heroVid) {
+        // Fix hero video GitHub link if needed
+        const heroSource = heroVid.querySelector("source");
+        if (heroSource) {
+            heroSource.src = resolveVideoUrl(heroSource.src);
+            heroVid.load();
+        }
+
         heroPlayBtn.addEventListener("click", () => {
             if (heroVid.paused) {
                 heroVid.play();
@@ -87,10 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // -------------------------------------------------------------
     const reelsViewport = document.getElementById("reels-feed-viewport");
     const reelsFilterContainer = document.getElementById("reels-filter-container");
-
     let activeReelFilter = "All";
 
     function renderReelsFilters() {
+        if (!reelsFilterContainer) return;
         reelsFilterContainer.innerHTML = PORTFOLIO_DATA.reelsCategories.map(cat => `
             <button class="sound-click reel-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
                 cat === activeReelFilter 
@@ -111,31 +122,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderReelsFeed() {
+        if (!reelsViewport) return;
+
         const filtered = activeReelFilter === "All" 
             ? PORTFOLIO_DATA.reels 
             : PORTFOLIO_DATA.reels.filter(r => r.category === activeReelFilter);
 
-        reelsViewport.innerHTML = filtered.map((reel, index) => `
-            <div class="reel-item relative w-full h-full snap-start flex-shrink-0 bg-slate-950 flex items-center justify-center overflow-hidden" data-index="${index}">
-                <video class="reel-video w-full h-full object-cover" loop muted poster="${reel.poster}">
-                    <source src="${reel.videoUrl}" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20 pointer-events-none"></div>
-                
-                <!-- Central Tap Play Indicator -->
-                <button class="reel-play-overlay absolute inset-0 flex items-center justify-center sound-click">
-                    <div class="w-12 h-12 rounded-full bg-slate-900/60 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                </button>
-            </div>
-        `).join("");
+        reelsViewport.innerHTML = filtered.map((reel, index) => {
+            // Fix GitHub video links automatically
+            const directVideoUrl = resolveVideoUrl(reel.videoUrl);
+
+            return `
+                <div class="reel-item relative w-full h-full snap-start flex-shrink-0 bg-slate-950 flex items-center justify-center overflow-hidden" data-index="${index}">
+                    <!-- preload="metadata" & #t=0.1 force the video to render its first frame as the poster -->
+                    <video class="reel-video w-full h-full object-cover" loop muted playsinline preload="metadata">
+                        <source src="${directVideoUrl}#t=0.1" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20 pointer-events-none"></div>
+                    
+                    <button class="reel-play-overlay absolute inset-0 flex items-center justify-center sound-click">
+                        <div class="w-12 h-12 rounded-full bg-slate-900/60 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </button>
+                </div>
+            `;
+        }).join("");
 
         setupReelsObserver(filtered);
     }
 
     function updateReelDetailCard(reel, index, total) {
-        document.getElementById("reel-counter").textContent = `${index + 1}/${total}`;
+        const counter = document.getElementById("reel-counter");
+        if (counter) counter.textContent = `${index + 1}/${total}`;
+
         document.getElementById("reel-title").textContent = reel.title;
         document.getElementById("reel-category-tag").textContent = reel.category;
         document.getElementById("reel-description").textContent = reel.description;
@@ -143,9 +163,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("reel-aspect").textContent = reel.aspectRatio;
 
         const tagsContainer = document.getElementById("reel-tags");
-        tagsContainer.innerHTML = reel.tags.map(t => `
-            <span class="text-[10px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-semibold border border-slate-700/60">${t}</span>
-        `).join("");
+        if (tagsContainer) {
+            tagsContainer.innerHTML = reel.tags.map(t => `
+                <span class="text-[10px] px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-semibold border border-slate-700/60">${t}</span>
+            `).join("");
+        }
     }
 
     function setupReelsObserver(currentList) {
@@ -176,6 +198,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let activeGfxFilter = "All Graphics";
 
     function renderGraphicsFilters() {
+        if (!graphicsFilterContainer) return;
+
         graphicsFilterContainer.innerHTML = PORTFOLIO_DATA.graphicsCategories.map(cat => `
             <button class="sound-click gfx-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
                 cat === activeGfxFilter 
@@ -196,6 +220,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderGraphicsGrid() {
+        if (!graphicsGrid) return;
+
         const filtered = activeGfxFilter === "All Graphics"
             ? PORTFOLIO_DATA.graphics
             : PORTFOLIO_DATA.graphics.filter(g => g.category === activeGfxFilter);
@@ -215,27 +241,29 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `).join("");
 
-        // Attach Lightbox Handlers
         document.querySelectorAll(".gfx-card").forEach(card => {
             card.addEventListener("click", () => {
-                const img = card.dataset.img;
-                const title = card.dataset.title;
-                document.getElementById("lightbox-img").src = img;
-                document.getElementById("lightbox-caption").textContent = title;
+                document.getElementById("lightbox-img").src = card.dataset.img;
+                document.getElementById("lightbox-caption").textContent = card.dataset.title;
                 document.getElementById("lightbox-modal").classList.remove("hidden");
             });
         });
     }
 
-    document.getElementById("lightbox-close").addEventListener("click", () => {
-        document.getElementById("lightbox-modal").classList.add("hidden");
-    });
+    const lightboxClose = document.getElementById("lightbox-close");
+    if (lightboxClose) {
+        lightboxClose.addEventListener("click", () => {
+            document.getElementById("lightbox-modal").classList.add("hidden");
+        });
+    }
 
     // -------------------------------------------------------------
     // RENDER SERVICES & REVIEWS
     // -------------------------------------------------------------
     function renderServices() {
         const container = document.getElementById("services-grid");
+        if (!container) return;
+
         container.innerHTML = PORTFOLIO_DATA.services.map(s => `
             <div class="glass-card rounded-3xl p-6 border border-slate-700/50 hover:border-indigo-500/50 transition-all group">
                 <div class="w-12 h-12 rounded-2xl bg-indigo-600/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all">
@@ -256,6 +284,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderReviews() {
         const container = document.getElementById("reviews-grid");
+        if (!container) return;
+
         container.innerHTML = PORTFOLIO_DATA.reviews.map(r => `
             <div class="glass-card rounded-3xl p-6 border border-slate-700/50 flex flex-col justify-between">
                 <div class="space-y-4">
@@ -276,25 +306,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // -------------------------------------------------------------
-    // TOAST NOTIFICATION SYSTEM
+    // INITIALIZATION
     // -------------------------------------------------------------
-    function showToast(message) {
-        const toastContainer = document.getElementById("toast-container");
-        const toast = document.createElement("div");
-        toast.className = "bg-indigo-600 text-white px-5 py-3 rounded-2xl shadow-xl font-semibold text-sm flex items-center gap-3 border border-indigo-400/30 animate-bounce";
-        toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${message}`;
-        
-        toastContainer.appendChild(toast);
-        setTimeout(() => toast.remove(), 4000);
-    }
-
-    document.getElementById("contact-form").addEventListener("submit", (e) => {
-        e.preventDefault();
-        showToast("Inquiry submitted! I'll get back to you within 24 hours.");
-        e.target.reset();
-    });
-
-    // INITIALIZE ALL SECTIONS
     renderReelsFilters();
     renderReelsFeed();
     renderGraphicsFilters();
